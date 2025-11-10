@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Digital Business Card Template</title>
+  <style>
+   
+    :root {
+      --primary: #0077ff;
+      --accent: #ff66b3;
+      --bg-light: #f9fbff;
+      --text-dark: #0e1a2b;
+      --muted: rgba(0,0,0,0.7);
+      --radius: 18px;
+      --shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Poppins', 'Inter', sans-serif;
+      background: var(--bg-light);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .card {
+      width: 600px;
+      height: 350px;
+      border-radius: var(--radius);
+      overflow: hidden;
+      position: relative;
+      box-shadow: var(--shadow);
+      background: linear-gradient(135deg, #ffffffb5, #ffffff60);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255,255,255,0.2);
+      display: flex;
+      flex-direction: row;
+      z-index: 1;
+    }
+
+    /* BALLOON BACKGROUND */
+    body::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: src="truckImage.jpg)";
+      background-size: cover;
+      background-position: center;
+      z-index: 0;
+    }
+
+    .left {
+      flex: 1;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      color: #fff;
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-size: 32px;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+    .tagline {
+      font-size: 14px;
+      line-height: 1.4;
+      opacity: 0.9;
+    }
+
+    .right {
+      flex: 1.5;
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background: rgba(255,255,255,0.8);
+      color: var(--text-dark);
+    }
+
+    .name {
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--text-dark);
+      margin-bottom: 5px;
+    }
+
+    .role {
+      font-size: 16px;
+      font-weight: 500;
+      color: var(--primary);
+      margin-bottom: 20px;
+    }
+
+    .info {
+      font-size: 14px;
+      line-height: 1.8;
+    }
+
+    .info a {
+      color: var(--accent);
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .info a:hover {
+      color: var(--primary);
+    }
+
+    .qr {
+      margin-top: 20px;
+      width: 90px;
+      height: 90px;
+      border-radius: 10px;
+      overflow: hidden;
+      background: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid #ddd;
+    }
+
+    .footer {
+      position: absolute;
+      bottom: 10px;
+      right: 20px;
+      font-size: 10px;
+      color: var(--muted);
+    }
+
+    @media print {
+      body { background: white; }
+      .card { box-shadow: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="left">
+      <img src="alhamzaTempLogo.png" alt="Company Logo" class="logo" width="75%">
+      <div class="tagline">Diesel Pro's<br>Diesel Sales • Mobile Fueling • Truck Ready</div>
+    </div>
+
+    <div class="right">
+      <div class="name">Baker Abed</div>
+      <div class="role">Chief Executive Officer</div>
+      <div class="info">
+        📞 <a href="tel:+27837869472">+27 83 786 9472 </a><br>
+        ✉️ <a href="mailto:abua@absamail.co.za">abua@absamail.co.za</a><br>
+        <!--🌐 <a href="https://example.com" target="_blank">www.example.com</a>-->
+      </div>
+      <!--<div class="qr">
+        <img src="https://api.qrserver.com/v1/create-qr-code/?size=90x90&data=https://example.com" alt="QR Code">
+      </div>-->
+    </div>
+    <div class="footer">Contact us for your tailor made Diesel Soultuions today</div>
+  </div>
+</body>
+</html>
